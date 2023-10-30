@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -16,21 +17,51 @@
                 <rect key="frame" x="0.0" y="0.0" width="219" height="212"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hoang" translatesAutoresizingMaskIntoConstraints="NO" id="fBW-EY-V3l">
-                        <rect key="frame" x="0.0" y="0.0" width="219" height="214"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hhm-rr-CXx">
+                        <rect key="frame" x="0.0" y="0.0" width="219" height="237"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5us-6f-crO">
+                                <rect key="frame" x="0.0" y="83" width="219" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H0T-vd-xeG">
+                                <rect key="frame" x="0.0" y="26" width="71" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcT-4B-zoU">
+                                <rect key="frame" x="109" y="26" width="110" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="hhm-rr-CXx" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" id="Djz-Wv-yUW"/>
+                <constraint firstItem="hhm-rr-CXx" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="FGd-Dh-yRx"/>
+                <constraint firstItem="hhm-rr-CXx" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Kbv-kZ-VJu"/>
+                <constraint firstItem="hhm-rr-CXx" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="soV-sG-dXR"/>
+            </constraints>
             <size key="customSize" width="127" height="73"/>
             <connections>
-                <outlet property="img_t" destination="fBW-EY-V3l" id="tfh-Pw-WsW"/>
+                <outlet property="first_name" destination="H0T-vd-xeG" id="2RX-CS-2U7"/>
+                <outlet property="img_t" destination="5us-6f-crO" id="yIz-yt-SuC"/>
+                <outlet property="last_name" destination="xcT-4B-zoU" id="RHX-kT-Usb"/>
             </connections>
-            <point key="canvasLocation" x="68.702290076335871" y="-3.5211267605633805"/>
+            <point key="canvasLocation" x="67.938931297709928" y="-3.5211267605633805"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="hoang" width="800" height="450"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

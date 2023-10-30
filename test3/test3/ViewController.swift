@@ -11,6 +11,10 @@ class ViewController: UIViewController {
     
     var img:[String] = ["hoang","hung","huy","huy1"]
     
+    var first_name:[String] = ["huy1","huy2","huy3","huy4"]
+    
+    var last_name:[String] = ["hoang1","hoang2","hoang3","hoang4"]
+ 
     var selectedImageName: String?
 
 
@@ -52,9 +56,21 @@ extension ViewController:  UICollectionViewDelegate, UICollectionViewDataSource{
         return img.count
     }
     
+    
+
+
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! MyCollectionViewCell
         cell.img_t.image = UIImage(named: img[indexPath.row])
+        
+        // Truy cập vào dữ liệu từ mảng và thiết lập giá trị cho các UILabel trong cell
+//            cell.first_name.text = first_name[indexPath.row]
+//            cell.last_name.text = last_name[indexPath.row]
+        cell.first_name.text = "huy"
+        cell.last_name.text = "Vu"
+
+        
 //        cell.img_t.layer.cornerRadius = 50
         
         // Tạo một UITapGestureRecognizer cho mỗi ô
